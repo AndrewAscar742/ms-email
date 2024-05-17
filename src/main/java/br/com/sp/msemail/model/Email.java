@@ -1,6 +1,7 @@
 package br.com.sp.msemail.model;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import br.com.sp.msemail.enums.StatusEmail;
 import jakarta.persistence.Column;
@@ -16,7 +17,7 @@ public class Email {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long emailId;
+	private UUID emailId;
 	/*
 	 * OwnerRef: Referência do proprietário, esse campo é pra guardar o ID do usuário que estamos enviando
 	 */
@@ -57,11 +58,11 @@ public class Email {
 		this.statusEmail = statusEmail;
 	}
 
-	public Long getEmailId() {
+	public UUID getEmailId() {
 		return emailId;
 	}
 
-	public void setEmailId(Long emailId) {
+	public void setEmailId(UUID emailId) {
 		this.emailId = emailId;
 	}
 
